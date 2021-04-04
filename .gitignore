@@ -1,3 +1,11 @@
+# Specific files and folders
+DebugConfig
+Obj
+RTE
+*.uvguix.*
+*.lst
+*.scvd
+
 # Prerequisites
 *.d
 
