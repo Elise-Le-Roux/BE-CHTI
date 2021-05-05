@@ -55,10 +55,9 @@ Alors
 		mov r2, #0
 		strb r2, [r1]
 		mov r0, #1
-		push {lr}
+		push {lr, r1, r2} 
 		bl GPIOB_Set ;	GPIOB_Set(1);
-		pop {lr}
-		
+		pop {lr, r1, r2} 
 		
 		
 		b FinSi
@@ -68,9 +67,9 @@ Sinon
 		mov r2, #1
 		strb r2, [r1]
 		mov r0, #1
-		push {lr}
+		push {lr, r1, r2} 
 		bl GPIOB_Clear ;	GPIOB_Clear(1);
-		pop {lr}
+		pop {lr, r1, r2}
 FinSi
 
 		bx lr

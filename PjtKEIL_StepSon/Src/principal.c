@@ -2,7 +2,7 @@
 
 #include "DriverJeuLaser.h"
 
-
+void CallbackSon(void);
 
 int main(void)
 {
@@ -16,13 +16,13 @@ CLOCK_Configure();
 
 // configuration du Timer 4
 	
-Timer_1234_Init_ff(TIM4, 6552);
+Timer_1234_Init_ff(TIM4, 6552); // période = 91 µs
 
 // Activation des interruptions issues du Timer 4
 // Association de la fonction à exécuter lors de l'interruption : timer_callback
 // cette fonction (si écrite en ASM) doit être conforme à l'AAPCS
 	
-Active_IT_Debordement_Timer( TIM4, 2, timer_callback);
+Active_IT_Debordement_Timer( TIM4, 2, CallbackSon);
 	
 
 //============================================================================	
