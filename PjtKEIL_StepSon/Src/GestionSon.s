@@ -27,8 +27,10 @@ Index dcw 0
 	area    moncode,code,readonly
 ; écrire le code ici	
 
+	include ./Driver/DriverJeuLaser.inc
+
 CallbackSon proc
-		push {r4} 
+		push {r4, lr} 
 
 		; S'arrete quand on a parcouru l'ensemble du tableau
 		ldr r1, =Index
@@ -54,8 +56,17 @@ CallbackSon proc
 		strh r2, [r1]
 
 Fin
-		pop {r4}
+        ldr r4, =SortieSon
+		ldrh r0, [r4]
+		bl PWM_Set_Value_TIM3_Ch3
+		pop {r4, pc}
 		bx lr
+		endp
+			
+StartSon proc
+		push{lr}
+		
+		pop{pc}
 		endp
 
 	
