@@ -30,8 +30,8 @@ Index dcw 0
 	include ./Driver/DriverJeuLaser.inc
 
 CallbackSon proc
-		push {r4, lr} 
-
+		push {r4-r5, lr} 
+Si ; (Index == LongueurSon)
 		; S'arrete quand on a parcouru l'ensemble du tableau
 		ldr r1, =Index
 		ldrsh r2, [r1]
@@ -40,8 +40,14 @@ CallbackSon proc
 		ldr r4, [r3]
 
 		cmp r2, r4
-		beq Fin
+		bne Sinon
 
+Alors
+		ldr r4, =SortieSon
+		ldrh r0, [r4]
+		b FinSi
+
+Sinon
 		; SortieSon = Son[Index]
 		ldr r3, =Son
 		ldrsh r0,[r3, r2, lsl #1]
@@ -55,19 +61,16 @@ CallbackSon proc
 		add r2, #1 
 		strh r2, [r1]
 
-Fin
-        ldr r4, =SortieSon
-		ldrh r0, [r4]
+FinSi
 		bl PWM_Set_Value_TIM3_Ch3
-		pop {r4, pc}
-		bx lr
+		pop {r4-r5, pc}
 		endp
 			
 StartSon proc
-		push{lr}
-		
-		pop{pc}
+		ldr r1, =Index
+		mov r2, #0
+		strh r2, [r1]
+		bx lr
 		endp
 
-	
 	END	

@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Obj\</OutputDirectory>
-          <OutputName>BacASable</OutputName>
+          <OutputName>StepDFT</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -389,9 +389,14 @@
               <FilePath>.\Src\principal.c</FilePath>
             </File>
             <File>
-              <FileName>Delay.s</FileName>
+              <FileName>DFT.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\Src\Delay.s</FilePath>
+              <FilePath>.\Src\DFT.s</FilePath>
+            </File>
+            <File>
+              <FileName>Signal.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Src\Signal.asm</FilePath>
             </File>
           </Files>
         </Group>
@@ -463,7 +468,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Obj\</OutputDirectory>
-          <OutputName>BacASable</OutputName>
+          <OutputName>StepDFT</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -803,9 +808,14 @@
               <FilePath>.\Src\principal.c</FilePath>
             </File>
             <File>
-              <FileName>Delay.s</FileName>
+              <FileName>DFT.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\Src\Delay.s</FilePath>
+              <FilePath>.\Src\DFT.s</FilePath>
+            </File>
+            <File>
+              <FileName>Signal.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Src\Signal.asm</FilePath>
             </File>
           </Files>
         </Group>
@@ -946,7 +956,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Obj\</OutputDirectory>
-          <OutputName>BacASable</OutputName>
+          <OutputName>StepDFT</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -1286,9 +1296,14 @@
               <FilePath>.\Src\principal.c</FilePath>
             </File>
             <File>
-              <FileName>Delay.s</FileName>
+              <FileName>DFT.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\Src\Delay.s</FilePath>
+              <FilePath>.\Src\DFT.s</FilePath>
+            </File>
+            <File>
+              <FileName>Signal.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Src\Signal.asm</FilePath>
             </File>
           </Files>
         </Group>
